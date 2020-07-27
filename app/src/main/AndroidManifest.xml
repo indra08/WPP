@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="gmedia.net.id.psp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".OrderNgrs.ResellerNGRS"></activity>
+        <activity android:name=".OrderNgrs.DetailOrderNGRS" />
+        <activity android:name=".OrderNgrs.ActOrderNGRS" />
+        <activity android:name=".ActKonsinyasi.ActKonsinyasi" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.WithTitleBar" />
+        <activity
+            android:name=".OrderPerdana.DetailOrderPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPulsa.DetailOrderPulsa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPulsa.ListReseller"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPerdana.ListBarang"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".PenjualanMKIOS.PenjualanMKIOS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PenjualanPerdana.PenjualanPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SemuaPenjualan.SemuaPenjualan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PelunasanPenjualan.PelunasanPenjualan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PelunasanPenjualan.VerifikasiPelunasan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DaftarPiutang.DaftarPiutang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StokSales.StokSales"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.InformasiBarang.OutletInfoBarang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.InformasiBarang.ActivityInfoBarang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.MutasiKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.OutletKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.OutletRekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.DetailRekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.BarangKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.MutasiKonsinyasi.DetailMutasiKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Rekonsinyasi.Rekonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.ActReturKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.OutletRetur"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActKonsinyasi.Retur.DetailReturKonsinyasi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderPerdana.CustomerPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainNavigationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TambahCustomer.DetailCustomer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- Service -->
+        <service android:name=".NotificationUtil.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".NotificationUtil.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notif" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/color_notif" />
+
+        <service android:name=".NotificationUtil.TokenGetter" /> <!-- Service -->
+        <activity
+            android:name=".NavKomplain.DetailComplaint"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavKunjungan.DetailCheckin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavVerifikasiOutlet.DetailVerifikasiOutlet"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavKunjungan.ActKunjunganOutlet"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".LocationService.LocationUpdater"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".NavVerifikasiOutlet.ActVerifikasiOutlet"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ACT_VERSPV" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavKunjungan.DetailKunjungan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PenjualanHariIni.PenjualanHariIni"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RiwayatPenjualan.RiwayatPenjualan"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ACT_MKIOS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="ACT_GA" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavTambahCustomer.ActTambahOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavKomplain.ActKomplain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoDeposit.CustomerDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoDeposit.ActDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoDeposit.DetailDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderTcash.ResellerTcash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderTcash.DetailTcashOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderTcash.ActOrderTcash"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DaftarPiutang.PiutangPerOutlet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavKunjungan.ActKunjungan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavKunjungan.ListSalesKunjungan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavMapsKunjungan.MapsKunjunganActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MapsOutletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPreorderPerdana.ActPreorderPerdanaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPreorderPerdana.DetailPreorderPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPreorderPerdana.ListBarangPreorderPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderDirectSelling.ActInjectPulsa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderDirectSelling.DetailInjectPulsa"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".OrderDirectSelling.Service.USSDService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/config_service" />
+        </service>
+        <!--
+<receiver android:name=".OrderDirectSelling.Service.SmsReceiverService">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        -->
+        <service
+            android:name=".OrderDirectSelling.Service.NotificationService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".NavPOL.ListOutletLocation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ACT_VER_LOC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavPOL.FormMapsActivity"
+            android:label="@string/title_activity_form_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavEvent.ActEvent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavEvent.DetailEvent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavEvent.DetailEventManual"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OrderDirectSelling.DetailDSPerdana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavMarketSurvey.ActMarketSurvey"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavMarketSurvey.DetailMarketSurvey"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavMarketSurvey.MarketSurveyTSA"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavMarketSurveyAOC.MarketSurveyAOC"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NavMarketSurveyAOC.ActMarketSurveyAOC"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPengajuanDeposit.DetailPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPengajuanDeposit.MainPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPengajuanDeposit.HistoryPengajuanDeposit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavPengajuanDeposit.HeaderPengajuanDeposit"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="ACT_DEPOSIT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NavMarketSurveyMD.ActMarketSurveyMD"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NavMarketSurveyMD.DetailMarketSurveyMD"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".OrderDirectSelling.HistoryDirectSelling"
+            android:screenOrientation="portrait" />
+        <activity android:name=".NavPengajuanDeposit.DetailCCIDDeposit" />
+    </application>
+
+</manifest>

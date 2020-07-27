@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WPPTypeI(Sales).iml" filepath="$PROJECT_DIR$/.idea/modules/WPPTypeI(Sales).iml" group="WPPTypeI(Sales)" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="WPPTypeI(Sales)/app" />
+      <module fileurl="file://$PROJECT_DIR$/bluetoothprinter/bluetoothprinter.iml" filepath="$PROJECT_DIR$/bluetoothprinter/bluetoothprinter.iml" group="WPPTypeI(Sales)/bluetoothprinter" />
+      <module fileurl="file://$PROJECT_DIR$/maulanacustommodul/maulanacustommodul.iml" filepath="$PROJECT_DIR$/maulanacustommodul/maulanacustommodul.iml" group="WPPTypeI(Sales)/maulanacustommodul" />
+      <module fileurl="file://$PROJECT_DIR$/zxing-android-embedded/zxing-android-embedded.iml" filepath="$PROJECT_DIR$/zxing-android-embedded/zxing-android-embedded.iml" group="WPPTypeI(Sales)/zxing-android-embedded" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    tools:context="gmedia.net.id.psp.LoginScreen">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_transparant2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:id="@+id/tv_footer"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:textSize="@dimen/subtitle_text_list"
+        android:textColor="@color/color_white"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/tv_footer"
+        android:id="@+id/ll_main"
+        android:layout_marginLeft="@dimen/default_margin"
+        android:layout_marginRight="@dimen/default_margin"
+        android:gravity="center"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="@dimen/default_margin"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_isidw_i"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:id="@+id/edt_username"
+                    android:inputType="textPersonName"
+                    android:hint="Username"
+                    android:textColorHint="@color/color_white"
+                    android:textColor="@color/color_white"
+                    android:backgroundTint="@color/color_white"
+                    android:drawableLeft="@mipmap/ic_username"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:id="@+id/edt_password"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:textColor="@color/color_white"
+                    android:textColorHint="@color/color_white"
+                    android:backgroundTint="@color/color_white"
+                    android:drawableLeft="@mipmap/ic_password"
+                    android:drawableRight="@mipmap/ic_hide"/>
+
+                <CheckBox
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_small"
+                    android:buttonTint="@color/color_white"
+                    android:text="Remember me"
+                    android:id="@+id/cb_remeber_me"
+                    android:checked="true"
+                    android:textColor="@color/color_white"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="1">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_login_3"
+                    android:visibility="gone"
+                    android:paddingLeft="@dimen/default_margin"
+                    android:paddingRight="@dimen/default_margin"
+                    android:text="    Change APN    "
+                    android:textSize="20sp"
+                    android:layout_marginRight="@dimen/default_margin"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_change_apn"
+                    android:textColor="@color/color_white"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_login_2"
+                    android:paddingLeft="@dimen/default_margin"
+                    android:paddingRight="@dimen/default_margin"
+                    android:text="    Login    "
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_login"
+                    android:textColor="@color/color_white"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

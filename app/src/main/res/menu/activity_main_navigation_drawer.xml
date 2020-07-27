@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_add_customer"
+            android:icon="@drawable/ic_add_customer_putih"
+            android:title="Tambah Customer" />
+        <item
+            android:id="@+id/nav_order_mkios"
+            android:icon="@drawable/nav_order_mkios"
+            android:visible="false"
+            android:title="Order Mkios" />
+        <item
+            android:id="@+id/nav_order_perdana"
+            android:icon="@drawable/nav_order_perdana"
+            android:visible="false"
+            android:title="Order Perdana" />
+        <item
+            android:id="@+id/nav_order_tcash"
+            android:icon="@drawable/ic_tcash_putih"
+            android:visible="false"
+            android:title="Order TCash" />
+        <item
+            android:id="@+id/nav_penjualan_mkios"
+            android:icon="@drawable/nav_penjualan_mkios"
+            android:title="Penjualan Mkios"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_penjualan_perdana"
+            android:icon="@drawable/nav_penjualan_perdana"
+            android:title="Penjualan Perdana"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_penjualan"
+            android:icon="@drawable/nav_penjualan_mkios"
+            android:title="Penjualan Hari Ini"/>
+        <item
+            android:id="@+id/nav_riwayat_penjualan"
+            android:icon="@drawable/ic_history_putih"
+            android:title="Riwayat Penjualan"/>
+        <item
+            android:id="@+id/nav_data_piutang"
+            android:icon="@drawable/nav_data_piutang"
+            android:title="Data Piutang" />
+        <item
+            android:id="@+id/nav_stok_sales"
+            android:icon="@drawable/nav_stock_sales"
+            android:title="Stok Perdana" />
+        <item
+            android:id="@+id/nav_complain"
+            android:icon="@drawable/ic_komplain_putih"
+            android:title="Komplain" />
+        <item
+            android:id="@+id/nav_verifikasi_outlet"
+            android:icon="@drawable/ic_verif_outlet_putih"
+            android:visible="false"
+            android:title="Verifikasi Outlet" />
+        <item
+            android:id="@+id/nav_checkin"
+            android:icon="@drawable/ic_chekin_putih"
+            android:title="Kunjungan" />
+        <item
+            android:id="@+id/nav_map_kunjungan"
+            android:icon="@mipmap/ic_map_kunjungan_putih"
+            android:title="Maps Kunjungan"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_info_deposit"
+            android:icon="@drawable/nav_order_perdana"
+            android:title="Info Deposit"
+            android:visible="false"/>
+        <item
+            android:id="@+id/nav_preorder_perdana"
+            android:icon="@mipmap/ic_preorder_perdana"
+            android:title="Preorder Perdana" />
+        <item
+            android:title="Akun">
+            <menu>
+                <item
+                    android:id="@+id/nav_akun"
+                    android:icon="@drawable/ic_akun_anda"
+                    android:title="Akun Anda" />
+
+                <item
+                    android:id="@+id/nav_change_password"
+                    android:icon="@mipmap/ic_lock"
+                    android:title="Ubah Password" />
+
+                <item
+                    android:id="@+id/nav_keluar"
+                    android:icon="@drawable/ic_keluar"
+                    android:title="Keluar" />
+            </menu>
+
+        </item>
+    </group>
+</menu>

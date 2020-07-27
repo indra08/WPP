@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gmedia.net.id.psp.NavVerifikasiOutlet.ActVerifikasiOutlet">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_header"
+            android:background="@color/default_background"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CustomAutoComplete"
+                android:layout_marginBottom="0dp"
+                android:hint="Nama Customer"
+                android:id="@+id/actv_customer"/>
+        </LinearLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/ll_header"
+            android:background="@color/colorPrimary"
+            android:id="@+id/tl_jenis"
+            app:tabTextColor="@color/color_white"
+            app:tabSelectedTextColor="@color/color_white"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabIndicatorColor="@color/color_white"
+            android:weightSum="2">
+
+            <com.google.android.material.tabs.TabItem
+                android:text="Verifikasi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/ti_verifikasi"/>
+
+            <com.google.android.material.tabs.TabItem
+                android:text="Aktivasi"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:id="@+id/ti_aktivasi"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/tl_jenis"
+            android:background="@drawable/login_container">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lv_customer"></ListView>
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/pb_proses"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

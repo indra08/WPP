@@ -68,7 +68,7 @@ public class PspPrinter extends BluetoothPrinter {
             //PROSES CETAK HEADER
             outputStream.write(PrintFormatter.DEFAULT_STYLE);
             outputStream.write(PrintFormatter.ALIGN_CENTER);
-            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.psp_header);
+            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.wpp);
             byte[] bmp_byte = PrintFormatter.decodeBitmap(bmp);
             if(bmp_byte != null){
                 outputStream.write(bmp_byte);
@@ -185,7 +185,7 @@ public class PspPrinter extends BluetoothPrinter {
             //PROSES CETAK HEADER
             outputStream.write(PrintFormatter.DEFAULT_STYLE);
             outputStream.write(PrintFormatter.ALIGN_CENTER);
-            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.psp_header);
+            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.wpp);
             byte[] bmp_byte = PrintFormatter.decodeBitmap(bmp);
             if(bmp_byte != null){
                 outputStream.write(bmp_byte);
@@ -304,7 +304,7 @@ public class PspPrinter extends BluetoothPrinter {
             //PROSES CETAK HEADER
             outputStream.write(PrintFormatter.DEFAULT_STYLE);
             outputStream.write(PrintFormatter.ALIGN_CENTER);
-            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.psp_header);
+            Bitmap bmp = BitmapFactory.decodeResource(context.getResources(), R.drawable.wpp);
             byte[] bmp_byte = PrintFormatter.decodeBitmap(bmp);
             if(bmp_byte != null){
                 outputStream.write(bmp_byte);

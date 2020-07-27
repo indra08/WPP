@@ -96,6 +96,7 @@
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
+                                android:visibility="gone"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:id="@+id/ll_order_mkios"
@@ -159,6 +160,7 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:id="@+id/ll_order_tcash"
+                                android:visibility="gone"
                                 android:background="?attr/selectableItemBackground"
                                 android:paddingRight="@dimen/default_margin_small"
                                 android:paddingLeft="@dimen/default_margin_small"
@@ -182,16 +184,6 @@
                                     android:textColor="@color/color_black"
                                     android:text="Order Link Aja"/>
                             </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/menu_height"
-                            android:id="@+id/ll_1a"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="@dimen/default_margin_small"
-                            android:weightSum="3">
-
                             <LinearLayout
                                 android:layout_width="0dp"
                                 android:layout_weight="1"
@@ -209,7 +201,7 @@
                                     android:layout_height="0dp"
                                     android:layout_weight="0.8"
                                     android:padding="@dimen/default_margin_small"
-                                    android:src="@mipmap/ic_ngrs"
+                                    android:src="@drawable/ic_tcash"
                                     android:scaleType="fitCenter"/>
 
                                 <TextView
@@ -219,8 +211,18 @@
                                     android:gravity="center"
                                     android:textSize="@dimen/font_menu"
                                     android:textColor="@color/color_black"
-                                    android:text="Order NGRS"/>
+                                    android:text="Order LinkAja Digipos"/>
                             </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/menu_height"
+                            android:id="@+id/ll_1a"
+                            android:visibility="gone"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="@dimen/default_margin_small"
+                            android:weightSum="3">
                         </LinearLayout>
 
                         <LinearLayout
@@ -306,6 +308,7 @@
                                 android:orientation="vertical"
                                 android:paddingRight="@dimen/default_margin_small"
                                 android:paddingLeft="@dimen/default_margin_small"
+                                android:visibility="gone"
                                 android:id="@+id/ll_direct_selling"
                                 android:background="?attr/selectableItemBackground"
                                 android:gravity="center"
@@ -429,7 +432,7 @@
                                     android:gravity="center"
                                     android:textSize="@dimen/font_menu"
                                     android:textColor="@color/color_black"
-                                    android:text="DDS"/>
+                                    android:text="Input Penjualan DS"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -889,6 +892,7 @@
                                 android:background="?attr/selectableItemBackground"
                                 android:paddingRight="@dimen/default_margin_small"
                                 android:paddingLeft="@dimen/default_margin_small"
+                                android:visibility="gone"
                                 android:gravity="center"
                                 android:weightSum="1">
 
@@ -1129,6 +1133,7 @@
         <include
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:visibility="gone"
             layout="@layout/layout_target_pencapaian"/>
     </RelativeLayout>
 

@@ -3,5 +3,6 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">192.168.20.36</domain>
         <domain includeSubdomains="true">api.putmasaripratama.co.id</domain>
+        <domain includeSubdomains="true">wpp.co.id</domain>
     </domain-config>
 </network-security-config>
